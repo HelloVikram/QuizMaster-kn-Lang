@@ -1,0 +1,97 @@
+Quark Questions = [
+  // Easy
+  {
+    question: "What is the capital of India?",
+    options: ["Delhi", "Mumbai", "Kolkata", "Chennai"],
+    answer: "Delhi",
+    difficulty: "easy"
+  },
+  {
+    question: "Which planet is known as the Red Planet?",
+    options: ["Earth", "Venus", "Mars", "Jupiter"],
+    answer: "Mars",
+    difficulty: "easy"
+  },
+  {
+    question: "How many days are there in a week?",
+    options: ["5", "6", "7", "8"],
+    answer: "7",
+    difficulty: "easy"
+  },
+  {
+    question: "What is H2O commonly known as?",
+    options: ["Salt", "Water", "Oxygen", "Sugar"],
+    answer: "Water",
+    difficulty: "easy"
+  },
+  {
+    question: "Which animal is known as the King of the Jungle?",
+    options: ["Tiger", "Elephant", "Lion", "Cheetah"],
+    answer: "Lion",
+    difficulty: "easy"
+  },
+
+  // Medium
+  {
+    question: "2 + 2 * 2 = ?",
+    options: ["4", "6", "8", "10"],
+    answer: "6",
+    difficulty: "medium"
+  },
+  {
+    question: "Largest ocean on Earth?",
+    options: ["Atlantic", "Indian", "Pacific", "Arctic"],
+    answer: "Pacific",
+    difficulty: "medium"
+  },
+  {
+    question: "Who is known as the Father of Computers?",
+    options: ["Charles Babbage", "Alan Turing", "Bill Gates", "Dennis Ritchie"],
+    answer: "Charles Babbage",
+    difficulty: "medium"
+  },
+  {
+    question: "Which gas do plants absorb from the atmosphere?",
+    options: ["Oxygen", "Nitrogen", "Carbon Dioxide", "Hydrogen"],
+    answer: "Carbon Dioxide",
+    difficulty: "medium"
+  },
+  {
+    question: "Which festival is known as Festival of Lights?",
+    options: ["Holi", "Diwali", "Eid", "Christmas"],
+    answer: "Diwali",
+    difficulty: "medium"
+  },
+
+  // Hard
+  {
+    question: "Who is the father of Artificial Intelligence?",
+    options: ["Alan Turing", "John McCarthy", "Dennis Ritchie", "Tim Berners-Lee"],
+    answer: "John McCarthy",
+    difficulty: "hard"
+  },
+  {
+    question: "What is the chemical symbol for Gold?",
+    options: ["Au", "Ag", "Gd", "Go"],
+    answer: "Au",
+    difficulty: "hard"
+  },
+  {
+    question: "Which country hosted the first Olympic Games?",
+    options: ["Italy", "USA", "Greece", "France"],
+    answer: "Greece",
+    difficulty: "hard"
+  },
+  {
+    question: "In which year was the World Wide Web invented?",
+    options: ["1985", "1989", "1995", "1979"],
+    answer: "1989",
+    difficulty: "hard"
+  },
+  {
+    question: "What is the largest internal organ in the human body?",
+    options: ["Heart", "Liver", "Brain", "Kidney"],
+    answer: "Liver",
+    difficulty: "hard"
+  }
+];
