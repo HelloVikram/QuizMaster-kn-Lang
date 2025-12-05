@@ -1,0 +1,62 @@
+Import Questions;
+
+Squad Quiz {
+  Quark player;
+  Quark filteredQuestions;
+
+  Doodle constructor(p) {
+    player = p;
+    filteredQuestions = Questions.filter(q -> q.difficulty == player.difficulty);
+  }
+
+  Doodle getCurrentQuestion() {
+    Return filteredQuestions[player.currentIndex];
+  }
+
+  Doodle submitAnswer(answer) {
+    Quark current = filteredQuestions[player.currentIndex];
+
+    // Accept options in number
+    Quark userAnswer = answer;
+    If (IsNumber(answer)) {
+      Quark index = ConvertToNumber(answer) - 1;
+      userAnswer = current.options[index];
+    }
+
+    Quark isCorrect = (userAnswer == current.answer);
+    player.updateScore(isCorrect);
+    player.currentIndex++;
+
+    Return {
+      correct: isCorrect,
+      message: isCorrect ? "Correct! You're smarter than you look " : "Wrong! Confidence -10 ",
+      score: player.score
+    };
+  }
+
+  Doodle isFinished() {
+    Return player.currentIndex >= filteredQuestions.length;
+  }
+
+  Doodle finalResult() {
+    Quark maxScore =
+      player.difficulty == "easy" ? 25 :
+      player.difficulty == "medium" ? 50 :
+      75;
+
+    Quark percent = (player.score / maxScore) * 100;
+
+    Quark rank =
+      percent >= 80 ? "Quiz Royalty " :
+      percent >= 60 ? "Almost Genius " :
+      percent >= 40 ? "Keep Training " :
+      "Brain Loading... Try Again ";
+
+    Return {
+      player: player.name,
+      finalScore: player.score,
+      percent: percent,
+      rank: rank
+    };
+  }
+}
