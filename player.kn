@@ -1,0 +1,23 @@
+Squad Player {
+  Quark name;
+  Quark difficulty;
+  Quark score = 0;
+  Quark currentIndex = 0;
+
+  Doodle constructor(n, d) {
+    name = n;
+    difficulty = d;
+  }
+//scoring system
+  Doodle updateScore(isCorrect) {
+    If (isCorrect) {
+      If (difficulty == "easy") score += 5;
+      If (difficulty == "medium") score += 10;
+      If (difficulty == "hard") score += 15;
+    } Else {
+      If (difficulty == "easy") score -= 2;
+      If (difficulty == "medium") score -= 5;
+      If (difficulty == "hard") score -= 7;
+    }
+  }
+}
