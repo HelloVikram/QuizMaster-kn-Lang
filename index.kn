@@ -1,0 +1,43 @@
+Import Player;
+Import Quiz;
+Import Questions;
+
+Quark game;   // Store Quiz instance
+
+Doodle startQuiz() {
+  Print("Enter your name: ");
+  Quark name = Input();
+
+  Print("Choose difficulty (easy / medium / hard): ");
+  Quark difficulty = Input();
+
+  Quark player = new Player(name, difficulty);
+  game = new Quiz(player);
+
+  Print("\n Welcome " + name + "! Quiz Started at " + difficulty + " level.");
+
+  askQuestion();
+}
+
+Doodle askQuestion() {
+  If (game.isFinished()) {
+    Print(" Quiz Finished!");
+    Print(game.finalResult());
+    Return;
+  }
+
+  Quark current = game.getCurrentQuestion();
+  Print("\nQuestion: " + current.question);
+  Print("Options: " + current.options.join(" | "));
+
+  Print("Your answer: ");
+  Quark ans = Input();
+
+  Quark response = game.submitAnswer(ans);
+  Print(response.message);
+  Print("Score: " + response.score);
+
+  askQuestion();
+}
+
+startQuiz();
